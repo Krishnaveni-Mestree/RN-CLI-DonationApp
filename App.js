@@ -1,18 +1,10 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import { StatusBar, StyleSheet, Text, useColorScheme, SafeAreaView } from 'react-native';
+import {StyleSheet, Text, useColorScheme, SafeAreaView } from 'react-native';
+import { getFontFamily } from './assets/fonts/helper';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
     <SafeAreaView style={styles.container}>
-     <Text style={{fontSize:70,fontWeight:700,fontFamily:'Inter'}}>Hello world</Text>
+     <Text style={{fontSize:70,fontFamily:getFontFamily('Inter','100')}}>Hello world</Text>
     </SafeAreaView>
   );
 }
