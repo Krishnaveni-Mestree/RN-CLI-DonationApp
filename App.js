@@ -5,17 +5,15 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { StatusBar, StyleSheet, Text, useColorScheme, SafeAreaView } from 'react-native';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <SafeAreaView style={styles.container}>
+     <Text style={{fontSize:70,fontWeight:700,fontFamily:'Inter'}}>Hello world</Text>
+    </SafeAreaView>
   );
 }
 
