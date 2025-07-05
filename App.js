@@ -1,18 +1,15 @@
-import {StyleSheet, Text, useColorScheme, SafeAreaView } from 'react-native';
-import { getFontFamily } from './assets/fonts/helper';
+import {StyleSheet } from 'react-native';
+import MainNavigation from './navigation/MainNavigation';
+import { NavigationContainer } from '@react-navigation/native';
 
 function App() {
   return (
-    <SafeAreaView style={styles.container}>
-     <Text style={{fontSize:70,fontFamily:getFontFamily('Inter','100')}}>Hello world</Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <MainNavigation/>
+    </NavigationContainer>
+      
+   
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+};
 
 export default App;
