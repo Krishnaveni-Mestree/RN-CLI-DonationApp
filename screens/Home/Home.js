@@ -4,6 +4,8 @@ import styles from "./style";
 import globalStyles from "../../assets/styles/globalStyles";
 
 import Header from "../../components/Header/Header";
+import Button from "../../components/Button/Button";
+import { isDisabled } from "react-native/types_generated/Libraries/LogBox/Data/LogBoxData";
 
 const Home=()=>{
     return(
@@ -11,8 +13,8 @@ const Home=()=>{
             <View>
                 <Text></Text>
                 <Header title={"Krishna M."} type={1}/>
-                <Header title={"Krishna M."} type={2}/>
-                <Header title={"Krishna M."} type={3}/>
+                <Button title={'Donate'} onPress={()=>{console.log('You just Pressed!')}}/>
+                <Button title={'Donate'} isDisabled={true}/>
             </View>
         </SafeAreaView>
     );
