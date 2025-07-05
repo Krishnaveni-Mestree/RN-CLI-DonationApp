@@ -5,7 +5,7 @@ import globalStyles from "../../assets/styles/globalStyles";
 
 import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
-import { isDisabled } from "react-native/types_generated/Libraries/LogBox/Data/LogBoxData";
+import Tab from "../../components/TabButton/Tab";
 
 const Home=()=>{
     return(
@@ -15,6 +15,8 @@ const Home=()=>{
                 <Header title={"Krishna M."} type={1}/>
                 <Button title={'Donate'} onPress={()=>{console.log('You just Pressed!')}}/>
                 <Button title={'Donate'} isDisabled={true}/>
+                <Tab title={"Highlight-Lifestyle"} />
+                <Tab title={"Highlight"} isInactive={true}/>
             </View>
         </SafeAreaView>
     );
